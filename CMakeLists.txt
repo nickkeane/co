@@ -18,6 +18,7 @@ include(FetchContent)
 
 # --- External Dependency: Abseil ---
 # The 'co' project depends on Abseil, so we need to fetch and make it available.
+set(ABSL_PROPAGATE_CXX_STD ON) # Let Abseil use the same C++ standard as our targets
 FetchContent_Declare(
     abseil
     GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
